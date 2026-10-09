@@ -1,25 +1,248 @@
+
+/* =================================
+   1. CONFIGURACIÓN GENERAL
+================================= */
+
 * {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: rgb(247, 232, 214);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =================================
+   2. ENCABEZADO
+================================= */
+
+header {
+    background-color: #3b2118;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 #inicial {
     color: rgb(230, 162, 15);
     text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-.cabeza{
-    color: red;
+.cabeza {
+    color: #f5dfc5;
+    font-size: 18px;
 }
+
+/* =================================
+   3. NAVEGACIÓN
+================================= */
 
 nav {
+    background-color: #a84324;
     text-align: center;
-    font-size: large;
+    padding: 18px;
 }
 
-img{
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+/* =================================
+   4. CONTENIDO PRINCIPAL
+================================= */
+
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: #fffaf3;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000012;
+}
+
+h2 {
+    color: #a84324;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* =================================
+   5. IMÁGENES
+================================= */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+main img {
+    max-height: 350px;
+    object-fit: cover;
+}
+
+/* =================================
+   6. TARJETAS
+================================= */
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #00000015;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px #00000020;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin: 0 0 15px;
+}
+
+.tarjeta h3 {
+    color: #a84324;
+    margin-bottom: 10px;
+}
+
+.tarjeta button {
+    background-color: #a84324;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.tarjeta button:hover {
+    background-color: #71301d;
+}
+
+/* =================================
+   7. BARRA LATERAL
+================================= */
+
+aside {
+    background-color: #ead1b5;
+    padding: 25px;
     margin: 20px;
+    border-left: 5px solid #a84324;
+    border-radius: 8px;
+}
+
+aside h2,
+aside h3 {
+    color: #71301d;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    padding-left: 25px;
+}
+
+aside a {
+    color: #a84324;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+/* =================================
+   8. BOTONES GENERALES
+================================= */
+
+button {
+    font-family: inherit;
+    font-weight: bold;
+}
+
+/* =================================
+   9. PIE DE PÁGINA
+================================= */
+
+footer {
+    background-color: #3b2118;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* =================================
+   10. RESPONSIVE PARA MÓVILES
+================================= */
+
+@media (max-width: 768px) {
+
+    #inicial {
+        font-size: 30px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 12px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    aside {
+        margin: 12px;
+    }
 }
