@@ -1,0 +1,25 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(247, 232, 214);
+}
+
+#inicial {
+    color: rgb(230, 162, 15);
+    text-align: center;
+}
+
+.cabeza{
+    color: red;
+}
+
+nav {
+    text-align: center;
+    font-size: large;
+}
+
+img{
+    margin: 20px;
+}
